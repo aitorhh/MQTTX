@@ -64,10 +64,13 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           images: aitorhh/mqttx-web
           flavor: |
             latest=true
           tags: |
+            type=sha
+            type=ref,event=branch
             type=ref,event=tag
 
       - name: set up qemu
