@@ -64,7 +64,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: emqx/mqttx-web
+          images: aitorhh/mqttx-web
           flavor: |
             latest=true
           tags: |
